@@ -13,7 +13,7 @@ export const Container = styled.header`
 
 
   h1 {
-    color: ${({theme}) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.PINK};
   }
 `;
 
@@ -33,8 +33,9 @@ export const Profile = styled.div`
     flex-direction: column;
     align-items: end;
 
-    span {
-      color: ${({theme}) => theme.COLORS.GRAY_300};
+    button {
+      background-color: transparent;
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
 
     strong {
