@@ -8,8 +8,9 @@ export const Container = styled.header`
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 0 12.3rem;
+  justify-content: center;
+  gap: 6.4rem;
+
 
   h1 {
     color: ${({theme}) => theme.COLORS.PINK};
