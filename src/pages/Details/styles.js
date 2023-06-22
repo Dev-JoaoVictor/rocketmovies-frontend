@@ -53,3 +53,9 @@ export const CreateInformation = styled.div`
     }
   }
 `;
+
+export const ContainerTags = styled.div`
+  display: flex;
+  gap: 8px;
+  margin: 4rem 0;
+`;

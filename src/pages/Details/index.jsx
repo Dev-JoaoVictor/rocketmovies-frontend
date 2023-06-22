@@ -1,9 +1,10 @@
-import { Container, Content, RatingMovie, CreateInformation } from "./styles";
+import { Container, Content, RatingMovie, CreateInformation, ContainerTags } from "./styles";
 import { LuClock } from "react-icons/lu";
 
 import { Header } from "../../components/Header";
 import { ButtonText } from "../../components/ButtonText";
 import { Rating } from "../../components/Rating";
+import { Tag } from "../../components/Tag";
 
 export function Details({ rating = 4 }) {
   return (
@@ -19,10 +20,15 @@ export function Details({ rating = 4 }) {
           <CreateInformation>
             <p>Por João Victor</p>
             <div>
-              <LuClock/>
+              <LuClock />
               <p>23/05/22 às 08:00</p>
             </div>
           </CreateInformation>
+          <ContainerTags>
+            <Tag title="Ficção cientifica"/>
+            <Tag title="Drama"/>
+            <Tag title="Familia"/>
+          </ContainerTags>
         </Content>
       </main>
     </Container>
