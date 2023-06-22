@@ -25,7 +25,7 @@ export const Content = styled.div`
   flex-direction: column;
 `;
 
-export const InfoMovie = styled.div`
+export const RatingMovie = styled.div`
   display: flex;
   align-items: center;
   text-align: center;

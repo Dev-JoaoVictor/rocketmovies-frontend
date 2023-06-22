@@ -1,4 +1,4 @@
-import { Container, Content, InfoMovie } from "./styles";
+import { Container, Content, RatingMovie } from "./styles";
 
 import { Header } from "../../components/Header";
 import { ButtonText } from "../../components/ButtonText";
@@ -11,10 +11,10 @@ export function Details({rating=4}) {
       <main>
         <Content>
           <ButtonText title="voltar" />
-          <InfoMovie>
+          <RatingMovie>
             <h2>Interestellar</h2>
             <Rating grade={rating} isBigSize={false} />
-          </InfoMovie>
+          </RatingMovie>
         </Content>
       </main>
     </Container>
