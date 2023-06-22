@@ -36,3 +36,20 @@ export const RatingMovie = styled.div`
     margin-right: 1.9rem;
   }
 `;
+
+export const CreateInformation = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+
+  div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    svg {
+      color: ${({theme}) => theme.COLORS.PINK};
+      font-size: 1.6rem;
+    }
+  }
+`;
