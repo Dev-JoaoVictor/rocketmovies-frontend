@@ -23,3 +23,15 @@ export const Content = styled.div`
   align-items: flex-start;
   flex-direction: column;
 `;
+
+export const InfoMovie = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2.4rem 0;
+  
+  h2 {
+    font-size: 3.6rem;
+    margin-right: 1.9rem;
+  }
+`;
