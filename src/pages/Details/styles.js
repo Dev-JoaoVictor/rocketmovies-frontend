@@ -10,4 +10,16 @@ export const Container = styled.div`
     "header"
     "content"
   ;
+
+  > main {
+    grid-area: content;
+    overflow-y: scroll;
+    padding: 4rem 12.3rem;
+  }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 `;
