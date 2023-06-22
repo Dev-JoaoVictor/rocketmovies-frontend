@@ -5,6 +5,7 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
+  gap: 4rem;
   grid-template-rows: 11.6rem auto;
   grid-template-areas: 
     "header"
@@ -13,8 +14,8 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    overflow-y: scroll;
-    padding: 4rem 12.3rem;
+    overflow-y: auto;
+    padding: 0 12.3rem;
   }
 `;
 
