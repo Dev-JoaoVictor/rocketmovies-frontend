@@ -15,7 +15,7 @@ export const Container = styled.div`
   > main {
     grid-area: content;
     overflow-y: auto;
-    padding: 0 12.3rem;
+    padding: 0 12.3rem 5rem;
   }
 `;
 
@@ -23,6 +23,12 @@ export const Content = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
+  .ContainerTags {
+    display: flex;
+    gap: 0.8rem;
+    margin: 4rem 0;
+  }
 `;
 
 export const RatingMovie = styled.div`
@@ -40,22 +46,11 @@ export const RatingMovie = styled.div`
 export const CreateInformation = styled.div`
   display: flex;
   align-items: center;
-  gap: 2.5rem;
-
-  div {
-    display: flex;
-    gap: 8px;
-    align-items: center;
+  gap: 8px;
 
     svg {
-      color: ${({theme}) => theme.COLORS.PINK};
+      color: ${({ theme }) => theme.COLORS.PINK};
       font-size: 1.6rem;
     }
-  }
 `;
 
-export const ContainerTags = styled.div`
-  display: flex;
-  gap: 8px;
-  margin: 4rem 0;
-`;
