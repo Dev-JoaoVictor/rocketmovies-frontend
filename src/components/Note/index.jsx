@@ -9,9 +9,7 @@ export function Note({ data, rating = 4, ...rest }) {
       <h2>{data.title}</h2>
       <Rating grade={rating} isbigSize={false} />
       <div>
-        <p>
-          {data.description}
-        </p>
+        <p>{data.description}</p>
       </div>
       {data.tags && (
         <footer>

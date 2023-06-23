@@ -29,7 +29,7 @@ export function Home() {
               ],
             }}
           />
-                    <Note
+          <Note
             data={{
               title: "Interestellar",
               description:
@@ -41,7 +41,7 @@ export function Home() {
               ],
             }}
           />
-                    <Note
+          <Note
             data={{
               title: "Interestellar",
               description:
