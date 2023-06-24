@@ -1,9 +1,10 @@
 import { Container, Form, Background } from "./styles";
 
-import { FiMail, FiLock, FiUser } from "react-icons/fi";
+import { FiMail, FiLock, FiUser, FiArrowLeft } from "react-icons/fi";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
 
 export function SignUp() {
   return (
@@ -18,9 +19,7 @@ export function SignUp() {
         <Input placeholder="E-mail" type="text" icon={FiMail} />
         <Input placeholder="Senha" type="password" icon={FiLock} />
         <Button title="Cadastrar" />
-        <a href="#">
-          voltar para o login
-        </a>
+        <ButtonText title="voltar para o login" icon={FiArrowLeft}/>
       </Form>
     </Container>
   );

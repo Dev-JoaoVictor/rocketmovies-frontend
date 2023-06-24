@@ -1,5 +1,5 @@
 import { Container, Content, RatingMovie, CreateInformation } from "./styles";
-import { LuClock } from "react-icons/lu";
+import { LuClock, LuArrowLeft } from "react-icons/lu";
 
 import { Header } from "../../components/Header";
 import { ButtonText } from "../../components/ButtonText";
@@ -12,7 +12,7 @@ export function Details({ rating = 4 }) {
       <Header />
       <main>
         <Content>
-          <ButtonText title="voltar" />
+          <ButtonText title="voltar" icon={LuArrowLeft} />
           <RatingMovie>
             <h2>Interestellar</h2>
             <Rating grade={rating} isBigSize={false} />

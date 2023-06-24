@@ -1,10 +1,9 @@
 import { Container } from "./styles";
-import { BiArrowBack } from "react-icons/bi";
 
-export function ButtonText({ title,...rest }) {
+export function ButtonText({ title, icon: Icon, ...rest }) {
   return (
     <Container {...rest}>
-      <BiArrowBack size={16} />
+      {Icon && <Icon size={20}/>}
       {...title}
     </Container>
   );
