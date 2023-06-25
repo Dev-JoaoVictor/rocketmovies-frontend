@@ -9,11 +9,13 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 6rem;
   grid-area: header;
 
   padding: 0 12.3rem;
 
-  h1 {
+  > h1 {
+    font-size: 2.4rem;
     color: ${({ theme }) => theme.COLORS.PINK};
   }
 `;
@@ -44,3 +46,16 @@ export const Profile = styled.div`
     }
   }
 `
+export const Search = styled.input`
+  width: 65%;
+  height: 5.6rem;
+  border-radius: 1rem;
+
+  padding: 1.9rem 2.4rem;
+  color:  ${({ theme }) => theme.COLORS.WHITE};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    &::placeholder {
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
+    }
+`;
