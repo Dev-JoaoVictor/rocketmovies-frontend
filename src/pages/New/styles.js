@@ -11,6 +11,16 @@ export const Container = styled.div`
     "content"
   ;
 
+  .tags {
+    background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
+    border-radius: 1rem;
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+
   > main {
     grid-area: content;
     padding: 0 12.3rem;
@@ -30,6 +40,10 @@ export const Form = styled.form`
     align-items: center;
     gap: 4rem;
     justify-content: space-between;
+  }
+
+  > p {
+    font-size: 2rem;
   }
 `;
 
