@@ -27,10 +27,10 @@ export function New() {
             <NoteItem isNew placeholder="Novo marcador"/>
           </div>
           <div>
-            <ButtonDelete>
+            <ButtonDelete type="button">
               Excluir filme
             </ButtonDelete>
-            <Button title="Salvar alterações"/>
+            <Button type="button" title="Salvar alterações"/>
           </div>
         </Form>
       </main>
