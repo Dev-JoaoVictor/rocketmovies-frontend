@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.header`
   height: 11.6rem;
@@ -23,8 +24,9 @@ export const Container = styled.header`
 export const Profile = styled.div`
   display: flex;
   align-items: center;
+  color: ${({theme}) => theme.COLORS.WHITE};
 
-  > img {
+  .img-profile {
     width: 6.4rem;
     height: 6.4rem;
     border-radius: 50%;

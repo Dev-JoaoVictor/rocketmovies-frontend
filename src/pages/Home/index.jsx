@@ -1,5 +1,6 @@
 import { Container, Content, NewMovie } from "./styles";
 import { AiOutlinePlus } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 import { Header } from "../../components/Header";
 import { Note } from "../../components/Note";
@@ -11,10 +12,10 @@ export function Home() {
       <main>
         <NewMovie>
           <h1>Meus filmes</h1>
-          <button>
+          <Link to="/new">
             <AiOutlinePlus />
             Adicionar filmes
-          </button>
+          </Link>
         </NewMovie>
         <Content>
           <Note

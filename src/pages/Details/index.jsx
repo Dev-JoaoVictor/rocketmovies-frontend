@@ -12,7 +12,7 @@ export function Details({ rating = 4 }) {
       <Header />
       <main>
         <Content>
-          <ButtonText title="voltar" icon={LuArrowLeft} />
+          <ButtonText to="/" title="voltar" icon={LuArrowLeft} />
           <RatingMovie>
             <h2>Interestellar</h2>
             <Rating grade={rating} isBigSize={false} />

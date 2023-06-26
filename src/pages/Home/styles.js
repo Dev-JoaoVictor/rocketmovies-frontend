@@ -30,12 +30,13 @@ export const NewMovie = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  > button {
+  > a {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 1.3rem 3.2rem;
     border-radius: 8px;
     background-color: ${({theme}) => theme.COLORS.PINK};
+    color: ${({theme}) => theme.COLORS.BACKGROUND_900};
   }
 `;
