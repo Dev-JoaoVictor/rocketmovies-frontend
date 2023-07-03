@@ -3,11 +3,11 @@ import { Tag } from "../Tag";
 
 import { Rating } from "../Rating";
 
-export function Note({ data, rating = 4, ...rest }) {
+export function Note({ data, ...rest }) {
   return (
     <Container {...rest}>
       <h2>{data.title}</h2>
-      <Rating grade={rating} isbigSize={false} />
+      <Rating grade={data.rating} isbigSize={false} />
       <div>
         <p>{data.description}</p>
       </div>

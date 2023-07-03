@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const Container = styled.header`
   height: 11.6rem;
@@ -48,8 +47,8 @@ export const Profile = styled.div`
     }
   }
 `
-export const Search = styled.input`
-  width: 65%;
+export const Search = styled.div`
+  /* width: 65%;
   height: 5.6rem;
   border-radius: 1rem;
 
@@ -59,5 +58,12 @@ export const Search = styled.input`
 
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
-    }
+    } */
+
+  display: flex;
+  width: 65%;
+  align-items: center;
+  padding: 0 6.4rem;
+  flex-grow: 1;
+
 `;

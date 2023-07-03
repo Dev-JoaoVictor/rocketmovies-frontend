@@ -33,6 +33,14 @@ export function New() {
   }
 
   async function handleNewNote() {
+    if (!title || !description || !rating) {
+      alert("Preencha todos os campos");
+    }
+
+    if (newTag) {
+      return alert("Você esqueceu de adicionar a tag");
+    }
+
     await api.post("/notes", {
       title,
       description,

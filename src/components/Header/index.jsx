@@ -4,8 +4,9 @@ import { useAuth } from "../../hooks/auth";
 
 import { api } from "../../services/api";
 import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
+import { useEffect, useState } from "react";
 
-export function Header() {
+export function Header({ children }) {
   const { signOut, user } = useAuth();
 
   const avatarUrl = user.avatar
@@ -15,7 +16,7 @@ export function Header() {
   return (
     <Container>
       <h1>Rocket Movies</h1>
-      <Search placeholder="Pesquisar pelo título" />
+      <Search>{children}</Search>
       <Profile>
         <div>
           <strong>{user.name}</strong>
