@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { api } from "../../services/api";
 
+import { useNavigate } from "react-router-dom";
+
 import { Header } from "../../components/Header";
 import { Note } from "../../components/Note";
 import { Input } from "../../components/Input";
@@ -12,6 +14,8 @@ import { Input } from "../../components/Input";
 export function Home() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
+
+  const navigate = useNavigate();
 
   function handleDetails(id) {
     navigate(`/details/${id}`);
