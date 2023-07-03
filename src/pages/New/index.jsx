@@ -1,7 +1,10 @@
-import { Container, Form, ButtonDelete } from "./styles";
+import { Container, Form } from "./styles";
 import { FiArrowLeft } from "react-icons/fi";
 
 import { useState } from "react";
+
+import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -11,8 +14,14 @@ import { TextArea } from "../../components/TextArea";
 import { ButtonText } from "../../components/ButtonText";
 
 export function New() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [rating, setRating] = useState("");
+
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
+
+  const navigate = useNavigate();
 
   function handleAddtags() {
     setTags((prevState) => [...prevState, newTag]);
@@ -23,6 +32,18 @@ export function New() {
     setTags((prevState) => prevState.filter((tag) => tag !== deleted));
   }
 
+  async function handleNewNote() {
+    await api.post("/notes", {
+      title,
+      description,
+      rating,
+      tags,
+    });
+
+    alert("Nota criada com sucesso!");
+    navigate("/");
+  }
+
   return (
     <Container>
       <Header />
@@ -31,10 +52,22 @@ export function New() {
           <ButtonText to="/" title="voltar" icon={FiArrowLeft} />
           <h1>Novo filme</h1>
           <div>
-            <Input placeholder="Título" type="text" />
-            <Input placeholder="Sua nota (de 0 a 5)" type="text" />
+            <Input
+              placeholder="Título"
+              type="text"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <Input
+              placeholder="Sua nota (de 0 a 5)"
+              type="text"
+              onChange={(e) => setRating(e.target.value)}
+            />
           </div>
-          <TextArea placeholder="Observações" type="text" />
+          <TextArea
+            placeholder="Observações"
+            type="text"
+            onChange={(e) => setDescription(e.target.value)}
+          />
           <p>Marcadores</p>
           <div className="tags">
             {tags.map((tag, index) => (
@@ -54,8 +87,11 @@ export function New() {
             />
           </div>
           <div>
-            <ButtonDelete type="button">Excluir filme</ButtonDelete>
-            <Button type="button" title="Salvar alterações" />
+            <Button
+              type="button"
+              title="Salvar alterações"
+              onClick={handleNewNote}
+            />
           </div>
         </Form>
       </main>

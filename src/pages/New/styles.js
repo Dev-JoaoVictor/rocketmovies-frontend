@@ -46,15 +46,3 @@ export const Form = styled.form`
     font-size: 2rem;
   }
 `;
-
-export const ButtonDelete = styled.button`
-  width: 100%;
-    background-color: ${({theme}) => theme.COLORS.BACKGROUND_900};
-    color: ${({theme}) => theme.COLORS.PINK};
-    height: 5.6rem;
-    border: 0;
-    padding: 0 1.6rem;
-    margin-top: 1.6rem;
-    border-radius: 1rem;
-    font-weight: 500;
-`;
