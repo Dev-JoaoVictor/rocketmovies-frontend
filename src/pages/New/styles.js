@@ -24,7 +24,7 @@ export const Container = styled.div`
   > main {
     grid-area: content;
     padding: 0 12.3rem;
-    margin: 4rem 0;
+    margin: 4rem 15rem;
     overflow-y: auto;
   }
 `;

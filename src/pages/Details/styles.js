@@ -17,6 +17,11 @@ export const Container = styled.div`
     overflow-y: auto;
     padding: 0 12.3rem 5rem;
   }
+
+  .movie-delete {
+    width: 15rem;
+    margin-top: 8rem;
+  }
 `;
 
 export const Content = styled.div`

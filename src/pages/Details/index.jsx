@@ -1,18 +1,20 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import { Container, Content, RatingMovie, CreateInformation } from "./styles";
 import { LuClock, LuArrowLeft } from "react-icons/lu";
+import { Container, Content, RatingMovie, CreateInformation } from "./styles";
 
 import { api } from "../../services/api";
 import { useAuth } from "../../hooks/auth";
 
-import { Header } from "../../components/Header";
-import { ButtonText } from "../../components/ButtonText";
-import { Rating } from "../../components/Rating";
 import { Tag } from "../../components/Tag";
+import { Header } from "../../components/Header";
+import { Rating } from "../../components/Rating";
+import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
 
 export function Details() {
+  const navigate = useNavigate();
   const { user } = useAuth();
   const params = useParams();
   const [data, setData] = useState(null);
@@ -25,6 +27,15 @@ export function Details() {
 
     fetchMovie();
   }, []);
+
+  async function handleRemove() {
+    const confirm = window.confirm("Deseja realmente remover a nota ?");
+
+    if (confirm) {
+      await api.delete(`/notes/${params.id}`);
+      navigate("/")
+    }
+  }
 
   return (
     <Container>
@@ -52,6 +63,11 @@ export function Details() {
 
             <p>{data.description}</p>
           </Content>
+          <Button
+            title="Excluir filme"
+            className="movie-delete"
+            onClick={handleRemove}
+          />
         </main>
       )}
     </Container>
