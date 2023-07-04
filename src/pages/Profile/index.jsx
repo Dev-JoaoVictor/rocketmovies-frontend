@@ -6,7 +6,7 @@ import { FiArrowLeft, FiMail, FiLock, FiUser, FiCamera } from "react-icons/fi";
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
 
-import avatarPlaceholder from "../../assets/avatar_placeholder.svg"
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -20,20 +20,24 @@ export function Profile() {
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
 
-  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` :  avatarPlaceholder;
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
 
   const [avatar, setAvatar] = useState(avatarUrl);
   const [avatarFile, setAvatarFile] = useState(null);
 
   async function handleUpdate() {
-    const user = {
+    const updated = {
       name,
       email,
       password: passwordNew,
       old_password: passwordOld,
     };
 
-    await updateProfile({ user, avatarFile });
+    const userUpdate = Object.assign(user, updated);
+
+    await updateProfile({ user: userUpdate, avatarFile });
   }
 
   async function handleChangeAvatar(event) {
