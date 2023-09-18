@@ -6,6 +6,21 @@ export const Container = styled.div`
 
   display: flex;
   align-items: stretch;
+
+  @media (max-width: 768px){
+   justify-content: center;
+   align-items: center;
+    
+   > div {
+    display: none;
+   }
+
+   > form {
+    padding: 0;
+   }
+
+  }
+  
 `;
 
 export const Form = styled.form`
@@ -35,6 +50,12 @@ export const Form = styled.form`
   > a{
     color: ${({ theme }) => theme.COLORS.PINK};
     margin-top: 4.8rem;
+  }
+
+  @media  (max-width: 426px){
+    > h1 {
+      font-size: 3.8rem;
+    }
   }
 `;
 
